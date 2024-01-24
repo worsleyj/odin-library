@@ -7,9 +7,9 @@ function Book(title, author, pages, read) {
     this.read = read;
     this.hasRead = function() {
         if (this.read == true) {
-            return "has been read";
+            return "Has been read";
         } else {
-            return "has not been read";
+            return "Has not been read";
         }
     }
 }
