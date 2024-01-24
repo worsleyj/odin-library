@@ -1,0 +1,16 @@
+table, th {
+    border: 2px solid black;
+}
+
+th {
+    padding: 8px;
+}
+
+td {
+    padding: 12px;
+}
+
+button {
+    margin: 4px;
+    padding: 5px;
+}

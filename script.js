@@ -21,7 +21,7 @@ function addToLibrary(book) {
 
 function displayBook(book) {
     var libraryTable = document.getElementById("library-table");
-    let row = libraryTable.insertRow(0);
+    let row = libraryTable.insertRow(-1);
 
     let title = row.insertCell(0);
     title.textContent = book.title;
