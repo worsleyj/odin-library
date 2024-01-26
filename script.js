@@ -7,9 +7,9 @@ function Book(title, author, pages, read) {
     this.read = read;
     this.hasRead = function() {
         if (this.read == true) {
-            return "Has been read";
+            return "Read";
         } else {
-            return "Has not been read";
+            return "Not Read";
         }
     }
 }
@@ -33,7 +33,11 @@ function displayBook(book) {
     pages.textContent = book.pages
 
     let read = row.insertCell(3);
-    read.textContent = book.hasRead()
+    read.textContent = book.hasRead();
+    
+    // let remove = row.insertCell(4);
+    // remove.textContent = "REMOVE"
+
 }
 
 function displayLibrary(library) {

@@ -18,19 +18,23 @@
     </table>
     <button type="button">NEW BOOK</button>
 
-    <form class="new-book">
-        <label for="title">Title</label>
-        <input type="text" id="title" placeholder="The Hobbit">
+    <dialog open>
+        <form class="new-book">
+            <label for="title">Title</label>
+            <input type="text" id="title" placeholder="The Hobbit">
+    
+            <label for="author">Author</label>
+            <input type="text" id="author" placeholder="George Orwell">
+    
+            <label for="pages">Pages</label>
+            <input type="number" id="pages" placeholder="25">
+    
+            <label for="hasRead">Have you read it?</label>
+            <input type="checkbox" id="hasRead">
+        </form>
+    </dialog>
 
-        <label for="author">Author</label>
-        <input type="text" id="author" placeholder="George Orwell">
-
-        <label for="pages">Pages</label>
-        <input type="number" id="pages" placeholder="25">
-
-        <label for="hasRead">Have you read it?</label>
-        <input type="checkbox" id="hasRead">
-    </form>
+    
 
     <script src="script.js"></script>
 </body>

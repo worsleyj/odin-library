@@ -14,3 +14,14 @@ button {
     margin: 4px;
     padding: 5px;
 }
+
+.new-book {
+    display: grid;
+    margin: 40px;
+    /* justify-items: center; */
+
+}
+
+.new-book > * {
+    padding: 15px;
+}
