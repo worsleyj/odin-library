@@ -1,4 +1,15 @@
 const odinLibrary = [];
+const bookDialog = document.querySelector('.book-dialog')
+const openDialog = document.querySelector('.add-book')
+const closeDialog = document.querySelector('.cancel-dialog')
+
+openDialog.addEventListener('click', () => {
+    bookDialog.showModal();
+})
+
+closeDialog.addEventListener('click', () => {
+    bookDialog.closeModal();
+})
 
 function Book(title, author, pages, read) {
     this.title = title;

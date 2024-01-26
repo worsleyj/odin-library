@@ -16,10 +16,10 @@
             <th>Read</th>
         </tr>
     </table>
-    <button type="button">NEW BOOK</button>
+    <button type="button" class="add-book">NEW BOOK</button>
 
-    <dialog open>
-        <form class="new-book">
+    <dialog class="book-dialog">
+        <form class="new-book" method="dialog">
             <label for="title">Title</label>
             <input type="text" id="title" placeholder="The Hobbit">
     
@@ -34,7 +34,7 @@
 
             <div class="form-buttons">
                 <button type="submit">Submit</button>
-                <button type="reset">Reset</button>
+                <button class="cancel-dialog">Reset</button>
             </div>
 
         </form>
