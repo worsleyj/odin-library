@@ -17,11 +17,18 @@ button {
 
 .new-book {
     display: grid;
-    margin: 40px;
+    margin: 25px;
     /* justify-items: center; */
 
 }
 
-.new-book > * {
+.new-book > label {
     padding: 15px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+
 }
