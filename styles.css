@@ -34,5 +34,6 @@ button {
 }
 
 .book-dialog::backdrop {
-    background: linear-gradient(90deg, red, blue)
+    background: linear-gradient(90deg, red, blue);
+    opacity: .4;
 }

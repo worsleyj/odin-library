@@ -1,7 +1,9 @@
 const odinLibrary = [];
+
 const bookDialog = document.querySelector('.book-dialog')
 const openDialog = document.querySelector('.add-book')
 const closeDialog = document.querySelector('.cancel-dialog')
+const submitDialog = document.querySelector('.submit-book')
 
 openDialog.addEventListener('click', () => {
     bookDialog.showModal();
@@ -9,6 +11,17 @@ openDialog.addEventListener('click', () => {
 
 closeDialog.addEventListener('click', () => {
     bookDialog.closeModal();
+})
+
+submitDialog.addEventListener('click', () => {
+    const title = document.querySelector('#title').value;
+    const author = document.querySelector('#author').value;
+    const pages = document.querySelector('#pages').value;
+    const hasRead = document.querySelector('#hasRead').checked; // boolean value of html checkbox
+    const book = new Book(title, author, pages, hasRead);
+    
+    addToLibrary(book);
+    displayBook(book);
 })
 
 function Book(title, author, pages, read) {
@@ -64,5 +77,4 @@ const book2 = new Book("Book2", "Author", 100, true)
 addToLibrary(book)
 addToLibrary(book2)
 addToLibrary(book)
-// console.log(odinLibrary)
 displayLibrary(odinLibrary)
