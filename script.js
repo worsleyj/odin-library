@@ -92,13 +92,13 @@ function displayLibrary(library) {
     }
 }
 
-const book = new Book("Book", "Author", 100, false, index)
+const book = new Book("Harry Potter and the Prisoner of Azkaban", "J. K. Rowling", 448, true, index)
 index++;
-const book2 = new Book("Book2", "Author", 100, true, index)
+const book2 = new Book("A Canticle for Leibowitz", "Walter M. Miller Jr.", 320, true, index)
 index++;
-const book3 = new Book("Book3", "Author", 100, true, index)
+const book3 = new Book("Earth Abides", "George R. Stewart", 325, false, index)
 index++;
-const book4 = new Book("Book4", "Author", 100, true, index)
+const book4 = new Book("The Lightning Thief", "Rick Riordan", 377, true, index)
 
 
 addToLibrary(book)
