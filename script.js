@@ -39,6 +39,13 @@ function Book(title, author, pages, read, index) {
             return "Not Read";
         }
     }
+    this.toggleRead = function() {
+        if (this.read == true) {
+            this.read = false;
+        } else {
+            this.read = true;
+        }
+    }
 }
 
 
@@ -61,15 +68,20 @@ function displayBook(book) {
 
     let read = row.insertCell(3);
     read.textContent = book.hasRead();
-    
-    const btn = document.createElement('button')
-    btn.innerText = 'x';
-    btn.addEventListener('click', () => {
+
+    read.addEventListener('click', () => {
+        book.toggleRead()
+        read.textContent = book.hasRead();
+    })
+
+    const delBtn = document.createElement('button')
+    delBtn.innerText = 'x';
+    delBtn.addEventListener('click', () => {
         libraryTable.deleteRow(book.index+1);
     })
 
     let remove = row.insertCell(4);
-    remove.appendChild(btn)
+    remove.appendChild(delBtn)
 
 }
 
