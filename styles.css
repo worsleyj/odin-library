@@ -1,5 +1,30 @@
+body {
+    background-color: #155263;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+}
+
+.title-bar{
+    padding: 50px;
+    color: #ffc93c;
+    background-color: #ff6f3c;
+    font-size: 45px;
+    width: 100vw;
+    text-align: center;
+}
+
+table {
+    /* margin: 0px 100px 0px 150px; */
+    width: 80vw;
+    border-radius: 10px;
+    padding: 25px;
+}
+
 table, th {
-    border: 2px solid black;
+    border: 2px solid #ff9a3c;
+    background-color: #ffc93c;
 }
 
 th {
@@ -13,13 +38,23 @@ td {
 button {
     margin: 4px;
     padding: 5px;
+    background-color: #ff6f3c;
+    border-radius: 20px;
+}
+
+.add-book {
+    margin: 5px;
+    width: 500px;
+}
+
+.add-book:hover {
+    color: white;
 }
 
 .new-book {
     display: grid;
-    margin: 25px;
-    /* justify-items: center; */
-
+    margin: 5px;
+    justify-items: center;
 }
 
 .new-book > label {
@@ -36,4 +71,9 @@ button {
 .book-dialog::backdrop {
     background: linear-gradient(90deg, red, blue);
     opacity: .4;
+}
+
+.read-toggle:hover {
+    cursor: pointer;
+    background-color: #ff6f3c;
 }

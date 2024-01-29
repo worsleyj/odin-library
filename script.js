@@ -64,9 +64,10 @@ function displayBook(book) {
     author.textContent = book.author;
 
     let pages = row.insertCell(2);
-    pages.textContent = book.index;
+    pages.textContent = book.pages;
 
     let read = row.insertCell(3);
+    read.className = "read-toggle";
     read.textContent = book.hasRead();
 
     read.addEventListener('click', () => {
