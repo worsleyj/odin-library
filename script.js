@@ -26,20 +26,22 @@ submitDialog.addEventListener('click', () => {
     displayBook(book);
 })
 
-function Book(title, author, pages, read, index) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.index = index;
-    this.hasRead = function() {
+class Book {
+    constructor(title, author, pages, read, index) { 
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+        this.index = index;
+    }
+    hasRead() {
         if (this.read == true) {
             return "Read";
         } else {
             return "Not Read";
         }
     }
-    this.toggleRead = function() {
+    toggleRead() {
         if (this.read == true) {
             this.read = false;
         } else {
