@@ -42,7 +42,8 @@ function displayBook(book, index) {
     delBtn.textContent = "Delete";
     delBtn.setAttribute("class", "del-btn");
     delBtn.addEventListener("click", () => {
-        
+        library.splice(index, 1);
+        displayLibrary();
     })
     bookCard.setAttribute("class", "book-card");
     bookCard.setAttribute("data-index", index);
@@ -78,6 +79,7 @@ function displayLibrary() {
         libraryContainer.removeChild(libraryContainer.lastChild);
     }
     addNewBookButton();
+
     let index = -1;
     library.forEach((book) => {
         index++;
@@ -87,7 +89,15 @@ function displayLibrary() {
 
 const bookOne = new Book("The Hobbit", "J.R.R. Tolkien", 295, false);
 const bookTwo = new Book("The Hobbit 2", "J.R.R. Tolkien", 249, true);
+const book = new Book("Harry Potter and the Prisoner of Azkaban", "J. K. Rowling", 448, true)
+const book2 = new Book("A Canticle for Leibowitz", "Walter M. Miller Jr.", 320, true)
+const book3 = new Book("Earth Abides", "George R. Stewart", 325, false)
+const book4 = new Book("The Lightning Thief", "Rick Riordan", 377, true)
 
 addBookToLibrary(bookOne);
 addBookToLibrary(bookTwo);
+addBookToLibrary(book);
+addBookToLibrary(book2);
+addBookToLibrary(book3);
+addBookToLibrary(book4);
 displayLibrary();
