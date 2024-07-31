@@ -19,8 +19,24 @@
             <div class="page-number">295</div>
             <div class="read-status">not read yet</div>
         </div> -->
+        <button class="book-card new-book">Add a New Book</button>
     </div>
+    <dialog class="modal">
+        <form id="new-book-form" method="dialog">
+            <label for="title">Title</label>
+            <input type="text" placeholder="The Hobbit">
 
+            <label for="author">Author</label>
+            <input type="text" placeholder="J.R.R. Tolkien">
+
+            <label for="pages">Pages</label>
+            <input type="number" name="pages" placeholder="295">
+
+            <label for="hasRead">Read It?</label>
+            <input type="checkbox" name="hasRead">
+        </form>
+
+    </dialog>
     
     <script src="script.js"></script>
 </body>

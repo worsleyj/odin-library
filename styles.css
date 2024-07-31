@@ -33,7 +33,9 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .library-container {
-    display: flex;
+    display: grid;
+    grid-template: 40% 40% / 1fr 1fr;
+    justify-items: center;
     gap: 12px;
 }
 
@@ -51,4 +53,22 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .page-number, .read-status {
     font-size: 24px;
+}
+
+.modal {
+    margin: auto;
+}
+
+.modal::backdrop {
+    background: linear-gradient(180deg, black, green);
+    opacity: .8;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+label {
+    padding-top: 12px;
 }

@@ -1,6 +1,10 @@
 const library = [];
 
-const libraryContainer = document.querySelector(".library-container");
+const modal = document.querySelector(".modal");
+const button = document.querySelector(".new-book");
+button.addEventListener("click", () => {
+    modal.showModal();
+})
 
 function Book(title, author, pages, hasRead) {
     this.title = title;
@@ -18,6 +22,7 @@ function addBookToLibrary(book) {
 }
 
 function displayLibrary() {
+    const libraryContainer = document.querySelector(".library-container");
     library.forEach((book) => {
         const bookCard = document.createElement("div");
         const titleAuthor = document.createElement("div");
