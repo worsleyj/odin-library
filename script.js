@@ -15,8 +15,16 @@ function addBookToLibrary(book) {
     library.push(book);
 }
 
+function displayLibrary() {
+    library.forEach((book) => {
+        console.log(book);
+    });
+}
+
 const bookOne = new Book("The Hobbit", "J.R.R. Tolkien", 295, false);
-console.log(bookOne);
+const bookTwo = new Book("The Hobbit 2", "J.R.R. Tolkien", 249, true);
+
 
 addBookToLibrary(bookOne);
-console.log(library[0].title);
+addBookToLibrary(bookTwo);
+displayLibrary();

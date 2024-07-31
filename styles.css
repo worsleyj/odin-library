@@ -31,3 +31,18 @@ p, h1, h2, h3, h4, h5, h6 {
 * {
     text-align: center;
 }
+
+.book-card {
+    background-color: slategray;
+    width: 500px;
+    height: 200px;
+}
+
+.title-author {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.page-number, .read-status {
+    font-size: 24px;
+}
