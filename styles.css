@@ -33,17 +33,20 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .library-container {
-    display: grid;
-    grid-template: 40% 40% / 1fr 1fr;
+    display: flex;
     justify-items: center;
     gap: 12px;
 }
 
 .book-card {
     background-color: slategray;
-    border: solid salmon;
+    border: solid rgb(252, 220, 161);
     width: 500px;
     height: 200px;
+}
+
+.book-card:hover {
+    opacity: .8;
 }
 
 .title-author {
@@ -60,15 +63,28 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .modal::backdrop {
-    background: linear-gradient(180deg, black, green);
+    background: linear-gradient(180deg, black, rgb(252, 220, 161));
     opacity: .8;
 }
+
 form {
     display: flex;
     flex-direction: column;
-    padding: 50px;
+    align-items: center;
+    padding: 25px 50px;
+}
+
+.button-container {
+    display: flex;
+    gap: 8px;
+}
+
+.button-container > button {
+    width: 65px;
+    margin-top: 12px;
 }
 
 label {
     padding-top: 12px;
 }
+

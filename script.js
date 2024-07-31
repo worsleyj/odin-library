@@ -41,7 +41,7 @@ function displayLibrary() {
         bookCard.appendChild(titleAuthor);
         bookCard.appendChild(pageNumber);
         bookCard.appendChild(readStatus);
-        libraryContainer.appendChild(bookCard);
+        libraryContainer.prepend(bookCard);
     });
 }
 
