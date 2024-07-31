@@ -35,14 +35,25 @@ function addBookToLibrary(book) {
 function displayBook(book, index) {
     const bookCard = document.createElement("div");
     const delBtn = document.createElement("button");
+    const readToggle = document.createElement("button");
     const titleAuthor = document.createElement("div");
     const pageNumber = document.createElement("div");
     const readStatus = document.createElement("div");
 
     delBtn.textContent = "Delete";
-    delBtn.setAttribute("class", "del-btn");
+    delBtn.setAttribute("class", "card-btn");
     delBtn.addEventListener("click", () => {
         library.splice(index, 1);
+        displayLibrary();
+    })
+    readToggle.textContent = "Toggle Read Status";
+    readToggle.setAttribute("class", "card-btn");
+    readToggle.addEventListener("click", () => {
+        if (book.read == "has been read") {
+            book.read = "not read yet";
+        } else if (book.read == "not read yet") {
+            book.read = "has been read";
+        }
         displayLibrary();
     })
     bookCard.setAttribute("class", "book-card");
@@ -59,6 +70,7 @@ function displayBook(book, index) {
     bookCard.appendChild(pageNumber);
     bookCard.appendChild(readStatus);
     bookCard.appendChild(delBtn);
+    bookCard.appendChild(readToggle);
     libraryContainer.prepend(bookCard);
 }
 
