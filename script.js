@@ -1,10 +1,7 @@
 const library = [];
+const libraryContainer = document.querySelector(".library-container");
 
 const modal = document.querySelector(".modal");
-const button = document.querySelector(".new-book");
-button.addEventListener("click", () => {
-    modal.showModal();
-})
 
 const submitBtn = document.querySelector(".submit");
 submitBtn.addEventListener("click", () => {
@@ -15,7 +12,9 @@ submitBtn.addEventListener("click", () => {
     const newBook = new Book(newTitle.value, newAuthor.value, newPages.value, newReadStatus)
     
     addBookToLibrary(newBook);
-    displayBook(newBook);
+    displayLibrary();
+    console.log(library);
+    // displayBook(newBook);
 })
 
 function Book(title, author, pages, hasRead) {
@@ -33,14 +32,20 @@ function addBookToLibrary(book) {
     library.push(book);
 }
 
-function displayBook(book) {
-    const libraryContainer = document.querySelector(".library-container");
+function displayBook(book, index) {
     const bookCard = document.createElement("div");
+    const delBtn = document.createElement("button");
     const titleAuthor = document.createElement("div");
     const pageNumber = document.createElement("div");
     const readStatus = document.createElement("div");
 
+    delBtn.textContent = "Delete";
+    delBtn.setAttribute("class", "del-btn");
+    delBtn.addEventListener("click", () => {
+        
+    })
     bookCard.setAttribute("class", "book-card");
+    bookCard.setAttribute("data-index", index);
     titleAuthor.setAttribute("class", "title-author");
     pageNumber.setAttribute("class", "page-number");
     readStatus.setAttribute("class", "read-status");
@@ -52,10 +57,32 @@ function displayBook(book) {
     bookCard.appendChild(titleAuthor);
     bookCard.appendChild(pageNumber);
     bookCard.appendChild(readStatus);
+    bookCard.appendChild(delBtn);
     libraryContainer.prepend(bookCard);
 }
+
+function addNewBookButton() {
+    const newBookBtn = document.createElement("button");
+    newBookBtn.setAttribute("class", "book-card new-book");
+    newBookBtn.textContent = "Add a New Book";
+    libraryContainer.appendChild(newBookBtn);
+
+    const button = document.querySelector(".new-book");
+    button.addEventListener("click", () => {
+    modal.showModal();
+})
+}
+
 function displayLibrary() {
-    library.forEach((book) => {displayBook(book)});
+    while (libraryContainer.firstChild) {
+        libraryContainer.removeChild(libraryContainer.lastChild);
+    }
+    addNewBookButton();
+    let index = -1;
+    library.forEach((book) => {
+        index++;
+        displayBook(book, index);
+    });
 }
 
 const bookOne = new Book("The Hobbit", "J.R.R. Tolkien", 295, false);

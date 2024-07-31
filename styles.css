@@ -42,7 +42,11 @@ p, h1, h2, h3, h4, h5, h6 {
     background-color: slategray;
     border: solid rgb(252, 220, 161);
     width: 500px;
-    height: 200px;
+    height: 225px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .book-card:hover {
@@ -88,3 +92,6 @@ label {
     padding-top: 12px;
 }
 
+.del-btn {
+    background-color: rgb(252, 220, 161);
+}
