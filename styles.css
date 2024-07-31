@@ -1,79 +1,29 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
 body {
-    background-color: #155263;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
 }
 
-.title-bar{
-    padding: 50px;
-    color: #ffc93c;
-    background-color: #ff6f3c;
-    font-size: 45px;
-    width: 100vw;
-    text-align: center;
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
 }
 
-table {
-    /* margin: 0px 100px 0px 150px; */
-    width: 80vw;
-    border-radius: 10px;
-    padding: 25px;
+input, button, textarea, select {
+    font: inherit;
 }
 
-table, th {
-    border: 2px solid #ff9a3c;
-    background-color: #ffc93c;
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
 }
 
-th {
-    padding: 8px;
-}
-
-td {
-    padding: 12px;
-}
-
-button {
-    margin: 4px;
-    padding: 5px;
-    background-color: #ff6f3c;
-    border-radius: 20px;
-}
-
-.add-book {
-    margin: 5px;
-    width: 500px;
-}
-
-.add-book:hover {
-    color: white;
-}
-
-.new-book {
-    display: grid;
-    margin: 5px;
-    justify-items: center;
-}
-
-.new-book > label {
-    padding: 15px;
-}
-
-.form-buttons {
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
-
-}
-
-.book-dialog::backdrop {
-    background: linear-gradient(90deg, red, blue);
-    opacity: .4;
-}
-
-.read-toggle:hover {
-    cursor: pointer;
-    background-color: #ff6f3c;
+#root, #__next {
+    isolation: isolate;
 }
