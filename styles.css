@@ -32,8 +32,14 @@ p, h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+.library-container {
+    display: flex;
+    gap: 12px;
+}
+
 .book-card {
     background-color: slategray;
+    border: solid salmon;
     width: 500px;
     height: 200px;
 }

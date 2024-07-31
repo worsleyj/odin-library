@@ -1,13 +1,15 @@
 const library = [];
 
+const libraryContainer = document.querySelector(".library-container");
+
 function Book(title, author, pages, hasRead) {
     this.title = title;
     this.author = author;
     this.pages = pages;
     if (hasRead) {
-        this.readStatus = "has been read";
+        this.read = "has been read";
     } else {
-        this.readStatus = "not read yet";
+        this.read = "not read yet";
     }
 }
 
@@ -17,13 +19,29 @@ function addBookToLibrary(book) {
 
 function displayLibrary() {
     library.forEach((book) => {
-        console.log(book);
+        const bookCard = document.createElement("div");
+        const titleAuthor = document.createElement("div");
+        const pageNumber = document.createElement("div");
+        const readStatus = document.createElement("div");
+
+        bookCard.setAttribute("class", "book-card");
+        titleAuthor.setAttribute("class", "title-author");
+        pageNumber.setAttribute("class", "page-number");
+        readStatus.setAttribute("class", "read-status");
+
+        titleAuthor.textContent = book.title + " by " + book.author;
+        pageNumber.textContent = book.pages;
+        readStatus.textContent = book.read;
+
+        bookCard.appendChild(titleAuthor);
+        bookCard.appendChild(pageNumber);
+        bookCard.appendChild(readStatus);
+        libraryContainer.appendChild(bookCard);
     });
 }
 
 const bookOne = new Book("The Hobbit", "J.R.R. Tolkien", 295, false);
 const bookTwo = new Book("The Hobbit 2", "J.R.R. Tolkien", 249, true);
-
 
 addBookToLibrary(bookOne);
 addBookToLibrary(bookTwo);
