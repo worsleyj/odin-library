@@ -13,8 +13,6 @@ submitBtn.addEventListener("click", () => {
     
     addBookToLibrary(newBook);
     displayLibrary();
-    console.log(library);
-    // displayBook(newBook);
 })
 
 
@@ -30,17 +28,6 @@ class Book {
         }
     }
 }
-
-// function Book(title, author, pages, hasRead) {
-//     this.title = title;
-//     this.author = author;
-//     this.pages = pages;
-//     if (hasRead) {
-//         this.read = "has been read";
-//     } else {
-//         this.read = "not read yet";
-//     }
-// }
 
 function addBookToLibrary(book) {
     library.push(book);
