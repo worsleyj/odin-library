@@ -19,7 +19,7 @@ function validateInput() {
 
 const closeBtn = document.querySelector(".close-modal");
 closeBtn.addEventListener("click", () => {
-  modal.close();
+  modal.closeModal();
 });
 
 const submitBtn = document.querySelector(".submit");
