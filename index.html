@@ -1,41 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <h1>Odin Library</h1>
     <div class="library-container">
-        <button class="book-card new-book">Add a New Book</button>
+      <button class="book-card new-book">Add a New Book</button>
     </div>
     <dialog class="modal">
-        <form id="new-book-form" method="dialog">
-            <h1>Add a New Book</h1>
+      <form id="new-book-form" method="dialog">
+        <h1>Add a New Book</h1>
 
-            <label for="title">Title</label>
-            <input id="new-title" type="text" value="Title">
+        <label for="title">Title</label>
+        <input
+          id="new-title"
+          type="text"
+          placeholder="Title"
+          maxlength="80"
+          required
+        />
 
-            <label for="author">Author</label>
-            <input id="new-author" type="text" value="Author">
+        <label for="author">Author</label>
+        <input
+          id="new-author"
+          type="text"
+          placeholder="Author"
+          maxlength="36"
+          required
+        />
 
-            <label for="pages">Pages</label>
-            <input id="new-pages" type="number" name="pages" value="25">
+        <label for="pages">Pages</label>
+        <input
+          id="new-pages"
+          type="number"
+          name="pages"
+          placeholder="9999"
+          min="5"
+          max="9999"
+          required
+        />
 
-            <label for="hasRead">Read It?</label>
-            <input id="new-read-status" type="checkbox" name="hasRead">
+        <label for="hasRead">Read It?</label>
+        <input id="new-read-status" type="checkbox" name="hasRead" />
 
-            <div class="button-container">
-                <button class="close-modal">Close</button>
-                <button class="submit">Add</button>
-            </div>
-
-        </form>
-
+        <div class="button-container">
+          <button class="close-modal">Close</button>
+          <button class="submit">Add</button>
+        </div>
+      </form>
     </dialog>
-    
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
